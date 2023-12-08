@@ -35,7 +35,18 @@
                 background-color: chocolate;
             }
             .dropdown:hover .dropdown-content{ display: block;}
-
+            ul{
+                margin-bottom: 15px;
+            }
+            form{
+                margin:10px;
+            }
+            form label{
+                margin: 15px;
+            }
+            form input{
+                margin: 15px;
+            }
         </style>
     </head>
     <body>
@@ -75,6 +86,7 @@
         <form>
             <label>Client Name</label>
             <input type="text" name="clientname" placeholder="Enter client name">
+            <br>
              <label>Meeting Type</label>
              <select>
                     <option value="Project planning meeting">Project Planning Meeting</option>
@@ -89,6 +101,7 @@
             <hr>
             <label>Date</label>
             <input type="date" name="meeting date" placeholder="Select date" required>
+            <br>
             <label>Time</label>
             <input type="time" name="meeting time" placeholder="Select time" required>
             <hr>
