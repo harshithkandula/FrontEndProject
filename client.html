@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .listspace{
+                margin-left: 6px;
+            }
+            .mycontainer{
+                padding: 16px;
+                background-color: #e5e5e5;
+                border-radius: 12px;
+                float: left;
+                width: 400px; 
+                height: 200px;
+            }
+            input[type=text]{
+                width: auto;
+                display: inline;
+                border: 1px solid #cccccc;
+                border-radius: 6px;
+                box-sizing: border-box;
+                padding: 8px;
+                margin: 8px;
+            }
+            input[type=password]{
+                width: auto;
+                display: inline;
+                border: 1px solid #cccccc;
+                border-radius: 6px;
+                box-sizing: border-box;
+                padding: 8px;
+                margin: 8px;
+            }   
+            input[type=submit]{
+                width: auto;
+                background-color: cornflowerblue;
+                color: cornsilk;
+                border: 1px solid #cccccc;
+                border-radius: 6px;
+                padding: 8px;
+                margin: 8px; 
+            }
+            button{
+                background-color: gainsboro;
+            }
+            button a{
+                text-decoration: none;
+                color: black;
+            }
+            button a:hover{
+                background-color: cadetblue;
+            }
+            li{
+                float: left;
+            }
+            .dropdown{
+                position: relative;
+                display: inline-block;
+            }
+            .dropdown-content{
+                background-color: gainsboro;
+                display: none;
+                min-width: fit-content;
+            }
+            .dropdown-content a{
+                text-decoration: none;
+                color: black;
+            }
+            .dropdown-content a:hover{
+                background-color: chocolate;
+            }
+            .dropdown:hover .dropdown-content{ display: block;}
+        </style>
+    </head>
+    <body style="background-color: blue;">
+        <h1>Anna Architecture Limited</h1>
+        <center><h2><em>Building Today To Guarentee You a Better Tomorrow</em></h2></center>
+        <ul style="list-style-type: none; border: hidden; margin-bottom: 2%;">
+            <li>
+                <button>
+                    <a href="client.html">Home</a>
+                </button>
+            </li>
+            <li>
+                <button>
+                    <a href="">About</a>
+                </button>
+            </li>
+            <li class="dropdown">
+                <button>
+                    <a href="">client</a>
+                </button>
+                <div class="dropdown-content">
+                    <a href="create-client.html">Create Client</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <button>
+                    <a href="">Meetings</a>
+                </button>
+                <div class="dropdown-content">
+                    <a href="Meetings.html">Schedule Meeting</a>
+                </div>
+            </li>
+        </ul>
+        
+        <br>
+        <div class="mycontainer">
+            <img src="C:\Users\hkand\Downloads\public-infrastructure.webp" alt="building" width="400" height="200">
+        </div>
+        <br>
+        <div class="mycontainer"style="margin-right:40%; margin-bottom:30%">
+            <h2>Login</h2>
+            <b>UserName</b>
+            <input type="text" name="Username" placeholder="Joeplane@gile.com" required>
+            <br>
+            <b>Password</b>
+            <input type="password" name="Password" placeholder="1234" required>
+            <br>
+            <a href="">Forgot Password</a>
+            <br>
+            <input type="button" value="Sign In">
+        </div>
+        <br>
+        <hr>
+        <div style="margin-top: 10%; background-color: aqua; font-style: italic;">
+            <div style="float: none;">
+                <h2><b>Prominent Clients</b></h2>
+                <ul style="list-style-type: none;">
+                    <li class="listspace" style="color: darkred;">Apile</li>
+                    &nbsp;
+                    <li class="listspace" style="color: darkcyan;">Mikrot Technology</li>
+                    &nbsp;
+                    <li class="listspace" style="color: darkkhaki;">Bloqtich</li>
+                    &nbsp;
+                    <li class="listspace" style="color: hotpink;">grancess</li>
+                    &nbsp;
+                    <li class="listspace" style="color: gold;">Holowland</li>
+                </ul>
+            </div>
+            <div style="float: none;">
+                <ul style="list-style-type: none;">
+                    <li class="listspace" style="color: darksalmon;">Huntstrain</li>
+                    &nbsp;
+                    <li class="listspace" style="color: darkslategrey;">brain&Gain</li>
+                    &nbsp;
+                    <li class="listspace" style="color: darkviolet;">marshmain</li>
+                </ul>
+            </div>
+        </div>
+    </body>
+</html>

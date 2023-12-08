@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body{
+                background-color: blanchedalmond;
+            }
+             button{
+                background-color: gainsboro;
+            }
+            button a{
+                text-decoration: none;
+                color: black;
+            }
+            button a:hover{
+                background-color: cadetblue;
+            }
+            li{
+                float: left;
+            }
+            .dropdown{
+                position: relative;
+                display: inline-block;
+            }
+            .dropdown-content{
+                background-color: gainsboro;
+                display: none;
+                min-width: fit-content;
+            }
+            .dropdown-content a{
+                text-decoration: none;
+                color: black;
+            }
+            .dropdown-content a:hover{
+                background-color: chocolate;
+            }
+            .dropdown:hover .dropdown-content{ display: block;}
+
+        </style>
+        <script>
+            function submission(){
+                document.getElementById("cn").innerHTML=clientname;
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Anna Architecture Limited</h1>
+        <center><h2><em>Building Today To Guarentee You a Better Tomorrow</em></h2></center>
+        <ul style="list-style-type: none;">
+            <li>
+                <button>
+                    <a href="client.html">Home</a>
+                </button>
+            </li>
+            <li>
+                <button>
+                    <a href="">About</a>
+                </button>
+            </li>
+            <li class="dropdown">
+                <button>
+                    <a href="">client</a>
+                </button>
+                <div class="dropdown-content">
+                    <a href="create-client.html">Create client</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <button>
+                    <a href="">Meetings</a>
+                </button>
+                <div class="dropdown-content">
+                    <a href="Meetings.html">Schedule Meeting</a>
+                </div>
+            </li>
+        </ul>
+        <br>
+        <form name="myForm" ng-app="myApp" ng-controller="myCtrl">
+            <label>Client Name</label>
+            <input type="text" name="clientname" ng-model="clientname" placeholder="Enter client name" id="cn" required><span ng-show="myForm.clientname.$touched && myForm.clientname.$invalid">Please Enter Valid Name</span>
+            <label>Area Of Operation</label>
+            <textarea name="operating in sectors" rows="4" cols="40" id="os" required></textarea>
+            <label>Place Of Headquarters</label>
+            <input type="text" name="place" ng-model="place" placeholder="Enter place" id="hq" required><span ng-show="myForm.place.$touched && myForm.place.$invalid">Please enter valid place of headquarters</span>
+            <label>State</label>
+            <input type="text" name="state" placeholder="Enter State" id="st" required>
+            <label>pincode</label>
+            <input type="number" name="pincode" placeholder="999999" id="pc">
+            <label>Company Chief</label>
+            <input type="text" name="chief name" placeholder="Enter Executive director name" id="cc">
+            <label>company Email</label>
+            <input type="text" name="mail id" ng-model="mailid" placeholder="Enter company email" id="cmid" required><span ng-show="myForm.mailid.$invalid">Please Enter Valid mail id</span>
+            <hr>
+            <h3>Client Manager Details</h3>
+            <label>client manager Name</label>
+            <input type="text" name="manager name" placeholder="Enter manager name" id="cm" required>
+            <label>Contact Number</label>
+            <input type="number" name="phoneno" ng-model="phoneno" placeholder="Enter Contact number" id="no" required><span ng-show="myForm.phoneno.$invalid">please Enter valid mobile number</span>
+            <label>Manager Email</label>
+            <input type="text" name="email id" ng-model="emailid" placeholder="Enter Manager's email" id="mid" required><span ng-show="myForm.emailid.$invalid" >Please Enter Valid Email id</span>
+            <br>
+            <br>
+            <center>
+                <a href="E:\Simplilearn\Front end course end project\client.html">
+                    <button>submit</button>
+                </a>
+            </center>
+        </form>
+        <script>
+            var app = angular.module('myApp',[]);
+            app.controller('myCtrl', function($scope){
+               document.getElementById("cn").innerHTML=$scope.clientname;
+               document.getElementById("hq").innerHTML=$scope.place;
+               document.getElementById("")
+            });
+        </script>
+    </body>
+</html>

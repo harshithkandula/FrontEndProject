@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body{
+                background-color: darkcyan;
+            }
+            button{
+                background-color: gainsboro;
+            }
+            button a{
+                text-decoration: none;
+                color: black;
+            }
+            button a:hover{
+                background-color: cadetblue;
+            }
+            li{
+                float: left;
+            }
+            .dropdown{
+                position: relative;
+                display: inline-block;
+            }
+            .dropdown-content{
+                background-color: gainsboro;
+                display: none;
+                min-width: fit-content;
+            }
+            .dropdown-content a{
+                text-decoration: none;
+                color: black;
+            }
+            .dropdown-content a:hover{
+                background-color: chocolate;
+            }
+            .dropdown:hover .dropdown-content{ display: block;}
+
+        </style>
+    </head>
+    <body>
+        <h1>Anna Architecture Limited</h1>
+        <center><h2><em>Building Today To Guarentee You a Better Tomorrow</em></h2></center>
+        <br>
+        <ul style="list-style-type: none;">
+            <li>
+                <button>
+                    <a href="client.html">Home</a>
+                </button>
+            </li>
+            <li>
+                <button>
+                    <a href="">About</a>
+                </button>
+            </li>
+            <li class="dropdown">
+                <button>
+                    <a href="">client</a>
+                </button>
+                <div class="dropdown-content">
+                    <a href="create-client.html">create client</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <button>
+                    <a href="">Meetings</a>
+                </button>
+                <div class="dropdown-content">
+                    <a href="Meetings.html">Schedule Meeting</a>
+                </div>
+            </li>
+        </ul>
+        
+        <br>
+        <form>
+            <label>Client Name</label>
+            <input type="text" name="clientname" placeholder="Enter client name">
+             <label>Meeting Type</label>
+             <select>
+                    <option value="Project planning meeting">Project Planning Meeting</option>
+                    <option value="Sprint planning meeting">Sprint Planning Meeting</option>
+                    <option value="Sprint review meeting">Sprint Review Meeting</option>
+                    <option value="Sprint retrospective meeting">Sprint Retrospective Meeting</option>
+                    <option value="Project review meeting">Project Review Meeting</option>
+                    <option value="others">Other</option>
+             </select>
+            <label>If Other</label>
+            <textarea name="meeting type" rows="3" cols="10"></textarea>
+            <hr>
+            <label>Date</label>
+            <input type="date" name="meeting date" placeholder="Select date" required>
+            <label>Time</label>
+            <input type="time" name="meeting time" placeholder="Select time" required>
+            <hr>
+            <label>Meetings Participants</label>
+            <input type="number" name="participants count" placeholder="Enter No. Of Participants">
+            <br>
+            <center>
+                <a href="E:\Simplilearn\Front end course end project\client.html">
+                    <button>Schedule Meeting</button>
+                </a>
+            </center>
+        </form>
+        
+    </body>
+</html>
