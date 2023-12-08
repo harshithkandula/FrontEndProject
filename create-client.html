@@ -35,7 +35,18 @@
                 background-color: chocolate;
             }
             .dropdown:hover .dropdown-content{ display: block;}
-
+            ul{
+                margin-bottom: 10px;
+            }
+            form{
+                margin-top: 15px;
+            }
+            form label{
+                margin: 15px;
+            }
+            form input{
+                margin: 15px;
+            }
         </style>
         <script>
             function submission(){
@@ -78,24 +89,32 @@
         <form name="myForm" ng-app="myApp" ng-controller="myCtrl">
             <label>Client Name</label>
             <input type="text" name="clientname" ng-model="clientname" placeholder="Enter client name" id="cn" required><span ng-show="myForm.clientname.$touched && myForm.clientname.$invalid">Please Enter Valid Name</span>
+            <br>
             <label>Area Of Operation</label>
             <textarea name="operating in sectors" rows="4" cols="40" id="os" required></textarea>
+            <br>
             <label>Place Of Headquarters</label>
             <input type="text" name="place" ng-model="place" placeholder="Enter place" id="hq" required><span ng-show="myForm.place.$touched && myForm.place.$invalid">Please enter valid place of headquarters</span>
+            <br>
             <label>State</label>
             <input type="text" name="state" placeholder="Enter State" id="st" required>
+            <br>
             <label>pincode</label>
             <input type="number" name="pincode" placeholder="999999" id="pc">
+            <br>
             <label>Company Chief</label>
             <input type="text" name="chief name" placeholder="Enter Executive director name" id="cc">
+            <br>
             <label>company Email</label>
             <input type="text" name="mail id" ng-model="mailid" placeholder="Enter company email" id="cmid" required><span ng-show="myForm.mailid.$invalid">Please Enter Valid mail id</span>
             <hr>
             <h3>Client Manager Details</h3>
             <label>client manager Name</label>
             <input type="text" name="manager name" placeholder="Enter manager name" id="cm" required>
+            <br>
             <label>Contact Number</label>
             <input type="number" name="phoneno" ng-model="phoneno" placeholder="Enter Contact number" id="no" required><span ng-show="myForm.phoneno.$invalid">please Enter valid mobile number</span>
+            <br>
             <label>Manager Email</label>
             <input type="text" name="email id" ng-model="emailid" placeholder="Enter Manager's email" id="mid" required><span ng-show="myForm.emailid.$invalid" >Please Enter Valid Email id</span>
             <br>
