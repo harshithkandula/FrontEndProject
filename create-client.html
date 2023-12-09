@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
         <style>
             body{
                 background-color: blanchedalmond;
@@ -51,6 +52,16 @@
         <script>
             function submission(){
                 document.getElementById("cn").innerHTML=clientname;
+                document.getElementById("areaop").innerHTML=aop[];
+                document.getElementById("hq").innerHTML=place;
+                document.getElementById("st").innerHTML=statename;
+                document.getElementById("pc").innerHTML=pcode;
+                document.getElementById("cc").innerHTML=ccname;
+                document.getElementById("cmid").innerHTML=mailid;
+                document.getElementById("cm").innerHTML=mgname;
+                document.getElementById("no").innerHTML=phoneno;
+                document.getElementById("mid").innerHTML=emailid;
+
             }
         </script>
     </head>
@@ -88,41 +99,49 @@
         <br>
         <form name="myForm" ng-app="myApp" ng-controller="myCtrl">
             <label>Client Name</label>
-            <input type="text" name="clientname" ng-model="clientname" placeholder="Enter client name" id="cn" required><span ng-show="myForm.clientname.$touched && myForm.clientname.$invalid">Please Enter Valid Name</span>
+            <input type="text" name="clientname" ng-model="clientname" placeholder="Enter client name" id="cn" minlength="3" size="50" pattern="[A-Za-z]" required><span ng-show="myForm.clientname.$touched && myForm.clientname.$invalid">Please Enter Valid Name</span>
             <br>
             <label>Area Of Operation</label>
-            <textarea name="operating in sectors" rows="4" cols="40" id="os" required></textarea>
+            <select name="aop" id="areaop" ng-model="aop[]" multiple required>
+                <option value="Information Technology">Information Technology</option>
+                <option value="Aerospace">Aerospace</option>
+                <option value="BPO">BPO</option>
+                <option value="Conglomerate">Conglomerate</option>
+                <option value="Biotechnology">Bio Technology</option>
+                <option value="Pharmaceutical">Pharmaceutical</option>
+                <option value="Shipping">Shipping</option>
+                <option value="Agroservices">Agroservices</option>
+                <option value="Mining">Mining</option>
+            </select>
             <br>
             <label>Place Of Headquarters</label>
-            <input type="text" name="place" ng-model="place" placeholder="Enter place" id="hq" required><span ng-show="myForm.place.$touched && myForm.place.$invalid">Please enter valid place of headquarters</span>
+            <input type="text" name="place" ng-model="place" placeholder="Enter place" id="hq" pattern="[A-Za-z]" required><span ng-show="myForm.place.$touched && myForm.place.$invalid">Please enter valid place of headquarters</span>
             <br>
             <label>State</label>
-            <input type="text" name="state" placeholder="Enter State" id="st" required>
+            <input type="text" name="state" ng-model="statename" placeholder="Enter State" id="st" pattern="[A-Za-z]" required>
             <br>
             <label>pincode</label>
-            <input type="number" name="pincode" placeholder="999999" id="pc">
+            <input type="number" name="pincode" ng-model="pcode" placeholder="999999" id="pc" pattern="[0-9]" required>
             <br>
             <label>Company Chief</label>
-            <input type="text" name="chief name" placeholder="Enter Executive director name" id="cc">
+            <input type="text" name="chief name" ng-model="ccname" placeholder="Enter Executive director name" id="cc" pattern="[A-Za-z]" required>
             <br>
             <label>company Email</label>
-            <input type="text" name="mail id" ng-model="mailid" placeholder="Enter company email" id="cmid" required><span ng-show="myForm.mailid.$invalid">Please Enter Valid mail id</span>
+            <input type="text" name="mail_id" ng-model="mailid" placeholder="Enter company email" id="cmid" pattern="[A-Za-z]-[0-9]-[_]-[@]{1}-[.]{1}" required><span ng-show="myForm.mail_id.$touched && myForm.mail_id.$invalid">Please Enter Valid mail id</span>
             <hr>
             <h3>Client Manager Details</h3>
             <label>client manager Name</label>
-            <input type="text" name="manager name" placeholder="Enter manager name" id="cm" required>
+            <input type="text" name="manager name" placeholder="Enter manager name" ng-model="mgname" id="cm" required>
             <br>
             <label>Contact Number</label>
-            <input type="number" name="phoneno" ng-model="phoneno" placeholder="Enter Contact number" id="no" required><span ng-show="myForm.phoneno.$invalid">please Enter valid mobile number</span>
+            <input type="number" name="phone_no" ng-model="phoneno" placeholder="Enter Contact number" id="no" size="10" pattern="[1-9]{1}-[0-9]{9}" required><span ng-show="myForm.phone_no.$invalid">please Enter valid mobile number</span>
             <br>
             <label>Manager Email</label>
-            <input type="text" name="email id" ng-model="emailid" placeholder="Enter Manager's email" id="mid" required><span ng-show="myForm.emailid.$invalid" >Please Enter Valid Email id</span>
+            <input type="text" name="email_id" ng-model="emailid" placeholder="Enter Manager's email" id="mid" pattern="[A-Za-z]-[0-9]-[_]-[@]{1}-[A-Za-z]-[.]{1}-[a-z]" required><span ng-show="myForm.email_id.$touched && myForm.email_id.$invalid" >Please Enter Valid Email id</span>
             <br>
             <br>
             <center>
-                <a href="E:\Simplilearn\Front end course end project\client.html">
-                    <button>submit</button>
-                </a>
+                <button onclick="submission()">submit</button>
             </center>
         </form>
         <script>
